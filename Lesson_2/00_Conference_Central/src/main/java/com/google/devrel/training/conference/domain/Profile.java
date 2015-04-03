@@ -45,6 +45,24 @@ public class Profile {
 	public String getUserId() {
 		return userId;
 	}
+	
+	 /**
+     * Update method for Profile.
+     * @param teeShirtSize 
+     * @param displayName Any string user wants us to display him/her on this system
+     * 
+     */
+	
+	public Profile update(TeeShirtSize teeShirtSize, String displayName) {
+		if (teeShirtSize != null){
+			this.teeShirtSize = teeShirtSize;
+		}
+		
+		if (displayName != null) {
+			this.displayName = displayName;
+		}
+		return this;
+	}
 
 	/**
      * Just making the default constructor private.
